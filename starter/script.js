@@ -113,9 +113,9 @@ const getCountryData = function (country) {
     });
 };
 
-btn.addEventListener('click', function () {
-  getCountryData('australia');
-});
+// btn.addEventListener('click', function () {
+//   getCountryData('australia');
+// });
 
 // const getCountryData = function (country) {
 //   //country 1
@@ -148,4 +148,34 @@ btn.addEventListener('click', function () {
 
 // btn.addEventListener('click', function () {
 //   getCountryData('singapore');
+// });
+
+////////////////////////////////////////////////////2 268 challenge #1
+
+// const JSONData = function (api) {
+//   return fetch(api).then(response => {
+//     if (!response.ok) throw new Error(`${errorMsg} (${response.status})`);
+//     return response.json();
+//   });
+// };
+
+// const geoLocating = function (lat, lng) {
+//   JSONData(
+//     `https://us1.api-bdc.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
+//   )
+//     .then(data =>
+//       JSONData(`https://restcountries.com/v2/name/${data.countryName}`)
+//     )
+//     .then(data => renderCountry(data[0]))
+//     .catch(err => {
+//       console.log(`${err} BOOM ISSUE`);
+//       renderError(`something went wrong ${err.message}`);
+//     })
+//     .finally(() => {
+//       countriesContainer.style.opacity = 1;
+//     });
+// };
+
+// btn.addEventListener('click', function () {
+//   geoLocating('52', '13.474');
 // });
